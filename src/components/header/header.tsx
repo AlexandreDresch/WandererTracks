@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <header className="w-full p-7 flex items-center justify-between">
+    <header className="w-full p-7 flex items-center justify-between fixed top-0 left-0 z-50">
       <Link to="/" className="flex">
-        <img src="/logo.svg" alt="Wanderer Tracks" className="" />
-        <div className="uppercase flex flex-col justify-center">
-          <h1 className="uppercase text-2xl">
+        <img src="/logo.svg" alt="Wanderer Tracks" className="w-14 md:w-auto" />
+        <div className="uppercase hidden md:flex flex-col justify-center">
+          <h1 className="text-2xl">
             Wanderer <strong>Tracks</strong>
           </h1>
           <span className="text-center text-sm text-slate-500">
@@ -16,7 +16,7 @@ export default function Header() {
       </Link>
 
       <nav>
-        <ul className="flex justify-center gap-4 uppercase text-lg">
+        <ul className="hidden md:flex justify-center gap-4 uppercase text-lg">
           <li className="hover:text-slate-700">
             <Link to="/">Home</Link>
           </li>
@@ -29,7 +29,7 @@ export default function Header() {
           <li className="hover:text-slate-700">
             <Link to="/pricing">Pricing</Link>
           </li>
-          <li className="bg-black rounded-xl px-1.5">
+          <li className="bg-black rounded-xl px-4">
             <Link to="/sign-in" className="text-white">
               Login
             </Link>
